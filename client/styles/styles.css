@@ -1,0 +1,95 @@
+body {
+  font-family: 'Helvetic Neue', Helvetica, Arial, sans-serif;
+  color: #333333;
+}
+
+h2 {
+  text-align: left;
+  font-size: 16px;
+}
+
+.reviewer {
+  float: left;
+  width: 213.33px;
+  height: auto;
+}
+
+.profPic {
+  float: left;
+  height: 57px;
+  width: 57px;
+  margin: 3px;
+}
+
+.profileText {
+  float: left;
+  width: 146.67px;
+}
+
+.profileText {
+  float: left;
+  width: 146.67px;
+}
+
+.name {
+  float: left;
+  color: #0073bb;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.location {
+  float: left;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.icon {
+  height: 15.99px;
+  max-width: auto;
+  float: left;
+  margin: 2px;
+}
+
+.count {
+  float: left;
+  font-size: 12px;
+  margin: 1px;
+  vertical-align: center;
+}
+
+.word {
+  float: left;
+  font-size: 12px;
+  font-weight: bold;
+  margin: 2px;
+  vertical-align: center;
+}
+
+.counterBox {
+  float: left;
+  height: 20px;
+  width: 120px;
+}
+
+.review {
+  float: left;
+  font-size: 14px;
+}
+
+.reviewText {
+  display: block;
+  font-size: 12px;
+  width: 372px;
+}
+
+.star {
+  height: 19px;
+  width: auto;
+  float: left;
+}
+
+.date {
+  color: #666666;
+  font-size: 14;
+}

@@ -1,0 +1,35 @@
+{
+  "name": "fec-cygnus-yelp-reviews",
+  "version": "1.0.0",
+  "description": "FEC Project",
+  "main": "server/db/index.js",
+  "scripts": {
+    "test": "jest --coverage",
+    "start": "nodemon server/app.js",
+    "build": "webpack -d --watch && ./node_modules/.bin/babel public/src --out-dir public/test --watch --presets @babel/preset-react",
+    "db:setup": "node ./mock/createReviews.js"
+  },
+  "author": "george-humphrey",
+  "devDependencies": {
+    "@babel/cli": "^7.8.3",
+    "@babel/core": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "@babel/preset-react": "^7.8.3",
+    "babel-loader": "^8.0.6",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "faker": "^4.1.0",
+    "jest": "^25.1.0",
+    "lorem-ipsum": "^2.0.3",
+    "puppeteer": "^2.1.0",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "jquery": "^3.4.1",
+    "mysql": "^2.4.2",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0"
+  }
+}
