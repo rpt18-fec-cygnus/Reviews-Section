@@ -1,3 +1,5 @@
+var Sequelize = require('sequelize');
+
 var mysql = require('mysql');
 
 dbConnection = mysql.createConnection({
