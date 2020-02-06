@@ -9,10 +9,8 @@ db.connect(function(err) {
   if (err) throw err;
   db.query('SELECT * FROM reviewText', function(err, result) {
     if (err) throw err;
-    console.log(result);
+    app.get('/party', (req, res) => res.send(result));
   });
 });
-
-app.get('/', (req, res) => res.send());
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
