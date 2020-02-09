@@ -20,7 +20,7 @@ class ReviewSection extends React.Component {
 
   componentDidMount() {
     $.ajax({
-      url: '/party',
+      url: '/1',
       type: 'GET',
       success: results => {
         console.log('results: ', results);
