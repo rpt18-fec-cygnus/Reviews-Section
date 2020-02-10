@@ -14,7 +14,6 @@ db.connect(function(err) {
     result
   ) {
     if (err) throw err;
-    // console.log('results: ', result);
     app.get('/1', (req, res) => res.send(result));
   });
 });

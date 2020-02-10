@@ -8,8 +8,7 @@ class ReviewSection extends React.Component {
     super(props);
 
     this.state = {
-      restaurant_id: 0,
-      reviews: ''
+      restaurant_id: 0
     };
   }
 
@@ -18,7 +17,6 @@ class ReviewSection extends React.Component {
       url: `/${extension}`,
       type: 'GET',
       success: results => {
-        console.log('results: ', results);
         this.setState({
           restaurant_id: extension
         });

@@ -1,12 +1,16 @@
+const ratingToStars = require('./ratingToStars');
+
 const reviewTemplate = function(
   name,
   location,
   friendCount,
   reviewCount,
   photoCount,
+  rating,
   date,
   text
 ) {
+  let stars = ratingToStars(rating);
   let template = `
   <div class='reviewBlock'>
     <div class='reviewer'>
@@ -43,11 +47,7 @@ const reviewTemplate = function(
 
     <div class='reviewContent'>
       <div class='stars'>
-        <img class='star' src='img/nostarIcon.png' />
-        <img class='star' src='img/nostarIcon.png' />
-        <img class='star' src='img/nostarIcon.png' />
-        <img class='star' src='img/nostarIcon.png' />
-        <img class='star' src='img/noStarIcon.png' />
+${stars}
       </div>
 
       <div class='date'>${date}</div>

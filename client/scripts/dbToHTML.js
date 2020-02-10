@@ -2,18 +2,23 @@ const reviewTemplate = require('./reviewTemplate');
 
 const dbToHTML = function(reviewArray) {
   let html = '';
-  console.log('reviewArray: ', reviewArray);
-  for (var i = 0; i < reviewArray.length; i++) {
-    console.log('i: ', i);
-    console.log('reviewArray: ', reviewArray[i]);
-    let name =
-      reviewArray[i]['first_name'] + ' ' + reviewArray[i]['last_name'][0] + '.';
-    let location = reviewArray[i]['reviewer_loc'];
-    let friendCount = reviewArray[i]['reviewer_friends'];
-    let reviewCount = reviewArray[i]['reviewer_reviews'];
-    let photoCount = reviewArray[i]['reviewer_photos'];
-    let date = reviewArray[i]['review_date'];
-    let text = reviewArray[i]['review_text'];
+  let byDate = reviewArray.sort(function(a, b) {
+    return Date.parse(b.review_date) - Date.parse(a.review_date);
+  });
+
+  for (var i = 0; i < byDate.length; i++) {
+    let name = byDate[i]['first_name'] + ' ' + byDate[i]['last_name'][0] + '.';
+
+    let location = byDate[i]['reviewer_loc'];
+
+    let friendCount = byDate[i]['reviewer_friends'];
+    let reviewCount = byDate[i]['reviewer_reviews'];
+    let photoCount = byDate[i]['reviewer_photos'];
+
+    let rating = byDate[i]['review_score'];
+    let unparsedDate = byDate[i]['review_date'];
+    let date = `${unparsedDate[5]}${unparsedDate[6]}/${unparsedDate[8]}${unparsedDate[9]}/${unparsedDate[0]}${unparsedDate[1]}${unparsedDate[2]}${unparsedDate[3]}`;
+    let text = byDate[i]['review_text'];
 
     let singleReview = reviewTemplate(
       name,
@@ -21,12 +26,14 @@ const dbToHTML = function(reviewArray) {
       friendCount,
       reviewCount,
       photoCount,
+      rating,
       date,
       text
     );
 
     html += singleReview;
   }
+
   return html;
 };
 

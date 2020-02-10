@@ -9,6 +9,11 @@ h2 {
   font-size: 16px;
 }
 
+.reviewBlock {
+  float: left;
+  margin: 15px;
+}
+
 .reviewer {
   float: left;
   width: 213.33px;
@@ -20,11 +25,6 @@ h2 {
   height: 57px;
   width: 57px;
   margin: 3px;
-}
-
-.profileText {
-  float: left;
-  width: 146.67px;
 }
 
 .profileText {
@@ -81,7 +81,7 @@ h2 {
 .reviewText {
   display: block;
   font-size: 12px;
-  width: 372px;
+  width: auto;
 }
 
 .star {
