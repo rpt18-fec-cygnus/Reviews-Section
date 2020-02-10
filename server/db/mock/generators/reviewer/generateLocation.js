@@ -112,7 +112,7 @@ var generateLocation = function(name) {
   };
 
   var stateNum = Math.floor(
-    (lTF(name.first[0]) * lTF(name.first[1])) / (lTF(name.last) + 1)
+    50 - (lTF(name.first[0]) + lTF(name.first[1])) - (lTF(name.last) + 1)
   );
   if (stateNum > 49) {
     stateNum = 23;

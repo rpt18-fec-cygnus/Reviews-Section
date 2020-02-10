@@ -1,6 +1,7 @@
 body {
   font-family: 'Helvetic Neue', Helvetica, Arial, sans-serif;
   color: #333333;
+  overflow: scroll;
 }
 
 h2 {

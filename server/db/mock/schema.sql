@@ -23,7 +23,7 @@ CREATE TABLE reviews (
 
  INSERT INTO reviews (id, restaurant_id, first_name, last_name, reviewer_loc, reviewer_photos, reviewer_friends, reviewer_reviews, review_score, review_date, review_text) 
  VALUES 
- (0, 1, 'Mary', 'Winston', 'Chiago, IL', 425, 18, 75, 5, '2020-01-30', "First time in LA, my pals that live there were like omg we have to go to Mendocino Farms. 
+ (0, 1, 'Mary', 'Winston', 'Chicago, IL', 425, 18, 75, 5, '2020-01-30', "First time in LA, my pals that live there were like omg we have to go to Mendocino Farms. 
  We drove 25 mins for lunch which is bizarre in Chicago but normal for LA I guess.");
 
  INSERT INTO reviews (id, restaurant_id, first_name, last_name, reviewer_loc, reviewer_photos, reviewer_friends, reviewer_reviews, review_score, review_date, review_text) 
@@ -33,5 +33,5 @@ CREATE TABLE reviews (
 
  INSERT INTO reviews (id, restaurant_id, first_name, last_name, reviewer_loc, reviewer_photos, reviewer_friends, reviewer_reviews, review_score, review_date, review_text) 
  VALUES 
- (2, 2, 'Calpurnia', 'V', 'Bridgeport, CT', 923, 467, 298, 0, '2019-12-07', "Everything was awful! Hohohohohoho!");
+ (2, 2, 'Calpurnia', 'Von Stropp', 'Bridgeport, CT', 923, 467, 298, 0, '2019-12-07', "Everything was awful! Ohohohohohoho!");
 
