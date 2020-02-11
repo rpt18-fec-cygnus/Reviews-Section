@@ -9,12 +9,9 @@ app.use('/', express.static('client'));
 db.connect(function(err) {
   if (err) throw err;
 
-  db.query(`SELECT * FROM reviews WHERE restaurant_id = ${extension}`, function(
-    err,
-    result
-  ) {
+  db.query(`SELECT * FROM reviews`, function(err, result) {
     if (err) throw err;
-    app.get('/1', (req, res) => res.send(result));
+    app.get('/data', (req, res) => res.send(result));
   });
 });
 

@@ -9,8 +9,12 @@ h2 {
   font-size: 16px;
 }
 
+#allReviews {
+  max-width: 800px;
+  min-width: 550px;
+}
+
 .reviewBlock {
-  /* float: left; */
   margin: 15px;
   min-height: 100px;
 }
