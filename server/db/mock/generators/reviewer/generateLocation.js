@@ -114,7 +114,7 @@ var generateLocation = function(name) {
   var stateNum = Math.floor(
     50 - (lTF(name.first[0]) + lTF(name.first[1])) - (lTF(name.last) + 1)
   );
-  if (stateNum > 49) {
+  if (stateNum > 49 || stateNum < 0) {
     stateNum = 23;
   }
   var cityNum = lTF(name.last) % 3;

@@ -14,12 +14,17 @@ class ReviewSection extends React.Component {
   }
 
   componentDidMount() {
+    console.log(`This is the id comments sees: ${Number(findExtension(location.href))}`)
+    var restId = isNaN(Number(findExtension(location.href))) ? 1 : Number(findExtension(location.href));
+    console.log(`this is restID ${restId}`)
     $.ajax({
       url: `/data`,
       type: 'GET',
       success: results => {
         this.setState({
-          restaurant_id: Number(findExtension(location.href))
+          restaurant_id: restId
+          // restaurant_id: Number(findExtension(location.href))
+          // restaurant_id: 2
         });
 
         let filteredById = results.filter(

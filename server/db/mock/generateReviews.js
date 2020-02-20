@@ -27,6 +27,7 @@ db.connect(function(err) {
   if (err) throw err;
 
   const mockReviews = generateReviews(1500);
+  // console.log(mockReviews);
   for (var i = 0; i < mockReviews.length; i++) {
     db.query(mockReviews[i], function(err, result) {
       if (err) throw err;

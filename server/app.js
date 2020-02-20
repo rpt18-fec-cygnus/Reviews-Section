@@ -3,6 +3,9 @@ const app = express();
 const db = require('./db/index.js');
 const port = 3001;
 const extension = 1; // TODO: Get extension from URL
+const cors = require('cors');
+
+app.use(cors());
 
 app.use('/', express.static('client'));
 
