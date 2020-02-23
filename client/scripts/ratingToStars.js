@@ -1,7 +1,7 @@
 const ratingToStars = function(rating) {
   let stars = '';
-  let noStar = `<img class='star' src='http://localhost:3001/img/nostarIcon.png' />`;
-  let star = `<img class='star' src='http://localhost:3001/img/starIcon.png' />`;
+  let noStar = `<img class='star' src='https://taktaktaka-rpt18-fec-cygnus.s3-us-west-1.amazonaws.com/Reviews/public/img/noStarIcon.png' />`;
+  let star = `<img class='star' src='https://taktaktaka-rpt18-fec-cygnus.s3-us-west-1.amazonaws.com/Reviews/public/img/starIcon.png' />`;
   for (let i = 0; i < rating; i++) {
     stars += star;
   }
