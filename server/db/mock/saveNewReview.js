@@ -13,7 +13,7 @@ const saveNewReview = function(object, index, callback) {
   db.query(query, function(err, result){
     if (err) throw err;
     callback(result);
-    console.log('New Review Created')
+    console.log('New Review Created');
   });
   
   // db.connect((err) => {
