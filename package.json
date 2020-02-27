@@ -8,7 +8,7 @@
   "main": "server/db/index.js",
   "scripts": {
     "test": "jest --coverage",
-    "start": "nodemon server/app.js",
+    "start": "node server/app.js",
     "build": "webpack -d --watch",
     "hardCode": "mysql -u root -p < server/db/mock/schema.sql",
     "seed": "node ./server/db/mock/generateReviews.js",
