@@ -24,7 +24,7 @@ app.get('/data', (req, res) => {
 
 app.get('/api/getScore', (req, res) => {
   var uid = req.query.uid;
-  db.query(`SELECT COUNT(*) AS reviewCount, AVG(review_score) AS avgScore FROM Reviews WHERE restaurant_id = ${uid};`, function (err, result) {
+  db.query(`SELECT COUNT(*) AS reviewCount, AVG(review_score) AS avgScore FROM reviews WHERE restaurant_id = ${uid};`, function (err, result) {
     if (err) throw err;
     res.send(result);
   });
