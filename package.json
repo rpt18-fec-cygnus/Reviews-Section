@@ -1,5 +1,6 @@
 {
   "name": "fec-cygnus-yelp-reviews",
+  "author": "george-humphrey",
   "version": "0.0.1",
   "description": "FEC Project module - Recommended Reviews",
   "license": "UNLICENSED",
@@ -7,11 +8,12 @@
   "main": "server/db/index.js",
   "scripts": {
     "test": "jest --coverage",
-    "start": "nodemon server/app.js",
+    "start": "node server/app.js",
     "build": "webpack -d --watch",
-    "db:setup": "node ./mock/createReviews.js"
+    "hardCode": "mysql -u root -p < server/db/mock/schema.sql",
+    "seed": "node ./server/db/mock/generateReviews.js",
+    "db": "npm run hardCode & npm run seed"
   },
-  "author": "george-humphrey",
   "devDependencies": {
     "@babel/cli": "^7.8.3",
     "@babel/core": "^7.8.3",
@@ -20,14 +22,15 @@
     "babel-loader": "^8.0.6",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
-    "faker": "^4.1.0",
+    "grunt": "^1.0.4",
+    "grunt-aws-s3": "^2.0.2",
     "jest": "^25.1.0",
-    "lorem-ipsum": "^2.0.3",
     "puppeteer": "^2.1.0",
     "webpack": "^4.41.5",
     "webpack-cli": "^3.3.10"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "jquery": "^3.4.1",
     "mysql": "^2.4.2",

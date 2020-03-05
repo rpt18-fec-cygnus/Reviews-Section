@@ -1,6 +1,7 @@
 body {
   font-family: 'Helvetic Neue', Helvetica, Arial, sans-serif;
   color: #333333;
+  overflow: scroll;
 }
 
 h2 {
@@ -8,8 +9,18 @@ h2 {
   font-size: 16px;
 }
 
+#allReviews {
+  max-width: 800px;
+  min-width: 550px;
+}
+
+.reviewBlock {
+  margin: 15px;
+  min-height: 100px;
+}
+
 .reviewer {
-  float: left;
+  /* float: left; */
   width: 213.33px;
   height: auto;
 }
@@ -19,11 +30,6 @@ h2 {
   height: 57px;
   width: 57px;
   margin: 3px;
-}
-
-.profileText {
-  float: left;
-  width: 146.67px;
 }
 
 .profileText {
@@ -73,14 +79,13 @@ h2 {
 }
 
 .review {
-  float: left;
   font-size: 14px;
 }
 
 .reviewText {
   display: block;
   font-size: 12px;
-  width: 372px;
+  width: auto;
 }
 
 .star {
@@ -88,8 +93,18 @@ h2 {
   width: auto;
   float: left;
 }
+.stars {
+  height: 25px;
+  width: auto;
+  float: left;
+  margin: 5px;
+}
 
 .date {
   color: #666666;
   font-size: 14;
+  height: 25px;
+  width: auto;
+  margin: 5px;
+  vertical-align: middle;
 }
