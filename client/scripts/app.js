@@ -1,22 +1,44 @@
-var App = {
-  restaurantID: 1,
+const React = require('react');
+const dbToHTML = require('./dbToHTML');
+const findExtension = require('./findExtension');
+let extension = 1; //TODO: Get extension from URL
+import $ from 'jquery';
 
-  initialize: function() {
-    // const url = window.location.href;
-    // const extension = //end of url
-    // App.restaurantID = extension
+class ReviewSection extends React.Component {
+  constructor(props) {
+    super(props);
 
-    allReviews.initialize();
+    this.state = {
+      restaurant_id: 0
+    };
+  }
 
-    // Fetch reviews
-    App.fetch();
-  },
+  componentDidMount() {
+    $.ajax({
+      url: `/data`,
+      type: 'GET',
+      success: results => {
+        this.setState({
+          restaurant_id: Number(findExtension(location.href))
+        });
 
-  fetch: function(callback = () => {}) {
-    Parse.readAll(data => {
-      // examine the response from the server request:
+        let filteredById = results.filter(
+          val => val.restaurant_id === this.state.restaurant_id
+        );
 
-      callback(JSON.parse(data));
+        document.getElementById('allReviews').innerHTML = dbToHTML(
+          filteredById
+        );
+      },
+      error: error => {
+        console.log(error);
+      }
     });
   }
-};
+
+  render() {
+    return <div id='allReviews'></div>;
+  }
+}
+
+export default ReviewSection;
